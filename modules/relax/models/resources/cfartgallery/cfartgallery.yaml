@@ -1,0 +1,185 @@
+swagger: '2.0'
+info:
+  version: '1'
+  title: cfArtGallery
+  description: A RESTful API running on ColdFusion A RESTful API running on ColdFusion
+host: 'localhost:52520'
+schemes:
+  - https
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+  - application/xml
+paths:
+  '/api/v1/artists/{ID}':
+    parameters:
+      - name: ID
+        in: path
+        required: true
+        type: integer
+    delete:
+      operationId: deleteArtist
+      summary: Delete an artist
+      tags:
+        - Artists
+      description: Deletes the specified user
+      responses:
+        '204':
+          description: ''
+    get:
+      operationId: GET_api-v1-artists-ID
+      summary: Details about an Artist
+      tags:
+        - v1
+        - Artists
+      description: |-
+        The Artist endpoint returns a structure of an Artist's information
+        based on their ID.
+      responses:
+        '200':
+          description: The artist details
+          schema:
+            $ref: '#/definitions/viewArtist'
+        '404':
+          description: Error response when an invalid artist ID is used
+  /api/v1/artists:
+    get:
+      operationId: GET_api-v1-artists
+      summary: List of artists
+      tags:
+        - v1
+        - Artists
+      description: |-
+        The Artists endpoint returns an array of Artist information
+        based on pagination.
+      parameters:
+        - name: skip
+          in: query
+          description: The number of records to skip for paging
+          type: integer
+          minimum: 0
+        - name: take
+          in: query
+          description: The number of records to take for paging
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/listArtist'
+    post:
+      operationId: POST_api-v1-artists
+      summary: Creates a new artist
+      tags:
+        - v1
+        - Artists
+      description: Accepts a JSON payload and creates a new artist entity
+      parameters:
+        - name: body
+          in: body
+          schema:
+            $ref: '#/definitions/viewArtist'
+      responses:
+        '201':
+          description: The new artist details
+          schema:
+            $ref: '#/definitions/newArtist'
+definitions:
+  viewArtist:
+    type: object
+    title: artist
+    properties:
+      firstName:
+        type: string
+        maxLength: 20
+      lastName:
+        type: string
+        maxLength: 20
+      address:
+        type: string
+        maxLength: 50
+      city:
+        type: string
+        maxLength: 20
+      state:
+        type: string
+        maxLength: 2
+      postalCode:
+        type: string
+        maxLength: 10
+      email:
+        type: string
+        maxLength: 50
+      phone:
+        type: string
+        maxLength: 20
+      fax:
+        type: string
+        maxLength: 12
+    required:
+      - firstName
+      - lastName
+      - address
+      - city
+      - state
+      - postalCode
+      - email
+      - phone
+      - fax
+  newArtist:
+    allOf:
+      - type: object
+        properties:
+          ID:
+            type: integer
+            format: int64
+        required:
+          - ID
+      - $ref: '#/definitions/viewArtist'
+  listArtist:
+    type: object
+    title: artist
+    properties:
+      firstName:
+        type: string
+        maxLength: 20
+      lastName:
+        type: string
+        maxLength: 20
+      address:
+        type: string
+        maxLength: 50
+      city:
+        type: string
+        maxLength: 20
+      state:
+        type: string
+        maxLength: 2
+      postalCode:
+        type: string
+        maxLength: 10
+      email:
+        type: string
+        maxLength: 50
+      phone:
+        type: string
+        maxLength: 20
+      fax:
+        type: string
+        maxLength: 12
+      ID:
+        type: integer
+        minimum: 1
+    required:
+      - firstName
+      - lastName
+      - address
+      - city
+      - state
+      - postalCode
+      - email
+      - phone
+      - fax
+      - ID
