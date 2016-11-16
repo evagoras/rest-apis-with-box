@@ -1,0 +1,103 @@
+{
+    "name":"My ColdBox App",
+    "version":"1.0.0",
+    "author":"Evagoras Charalambous",
+    "location":"",
+    "directory":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"",
+        "URL":""
+    },
+    "bugs":"",
+    "slug":"MyColdBoxApp",
+    "shortDescription":"A sweet package",
+    "description":"",
+    "instructions":"",
+    "changelog":"",
+    "type":"",
+    "keywords":[
+        
+    ],
+    "private":false,
+    "engines":[
+        {
+            "type":"Lucee",
+            "version":">4.5"
+        },
+        {
+            "type":"adobe",
+            "version":">11"
+        }
+    ],
+    "defaultEngine":"",
+    "defaultPort":0,
+    "projectURL":"",
+    "license":[
+        {
+            "type":"",
+            "URL":""
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+        "coldbox":"4.1.0+00002",
+        "relax":"be",
+        "cbvalidation":"^1.2.0+24",
+        "cbdebugger":"^1.4.0+00008",
+        "cbjavaloader":"^1.3.0+00007",
+        "wikitext":"^1.1.0",
+        "testbox":"^2.3.0+00044"
+    },
+    "devDependencies":{
+        "testbox":"2.3.0+00044"
+    },
+    "installPaths":{
+        "testbox":"testbox",
+        "coldbox":"coldbox",
+        "relax":"modules\\relax",
+        "cbvalidation":"modules\\cbvalidation",
+        "cbdebugger":"modules\\cbdebugger",
+        "cbjavaloader":"modules\\cbjavaloader",
+        "wikitext":"modules\\wikitext"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "testbox":{
+        "runner":[
+            {
+                "default":""
+            }
+        ],
+        "labels":[
+            
+        ],
+        "reporter":"",
+        "reporterResults":"",
+        "bundles":[
+            ""
+        ],
+        "directory":{
+            "mapping":"",
+            "recurse":true
+        },
+        "watchers":[
+            
+        ],
+        "notify":{
+            "emails":[
+                
+            ],
+            "growl":"",
+            "URL":""
+        }
+    }
+}

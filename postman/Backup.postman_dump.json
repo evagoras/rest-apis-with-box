@@ -1,0 +1,297 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+			"name": "Building RESTful APIs using Box Products",
+			"description": "",
+			"order": [],
+			"folders": [
+				{
+					"id": "64f62376-ffe0-4c0e-ef33-55be010ae5d4",
+					"name": "/artists/:ID",
+					"description": "",
+					"write": true,
+					"order": [
+						"87847cf6-f667-03e4-8546-329b12390a52",
+						"793ebbe6-8148-1b68-d55e-66da399ea120"
+					],
+					"collection": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"owner": "177461",
+					"collection_id": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a"
+				},
+				{
+					"id": "e816a970-300a-ef83-49c1-4ed9a3d17a7f",
+					"name": "/users",
+					"description": "",
+					"order": [
+						"8c6bbe0a-d722-0844-25e7-a500fec749cc",
+						"9d580700-480c-1058-5ea3-c0fa5c273e1d",
+						"550a0d0d-229c-54c3-a1a3-c0706daade96"
+					],
+					"owner": "177461",
+					"collection_id": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"collection": "66a8d68b-509e-b7b9-97ef-4c350a99928a"
+				},
+				{
+					"id": "1917d3c5-7ecd-4732-a9f6-7c2ff996f164",
+					"name": "v1",
+					"description": "",
+					"order": [
+						"9807dddd-44bf-4635-45e3-f5f7ac670ca6",
+						"9950bdbd-4b82-7aa5-dc7d-54fa7bb25fb9",
+						"578fe209-914e-b758-fbc0-b6dd74aa85aa",
+						"e2715ba1-7e78-d49f-e409-0e736f684399"
+					],
+					"owner": "177461",
+					"collection_id": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"collection": "66a8d68b-509e-b7b9-97ef-4c350a99928a"
+				},
+				{
+					"id": "5dc8d705-86cb-cd0d-4015-6f07fe110e63",
+					"name": "v2",
+					"description": "",
+					"order": [
+						"9b70e77d-09c4-464b-4ce1-18108f2533bc"
+					],
+					"owner": "177461",
+					"collection_id": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"collection": "66a8d68b-509e-b7b9-97ef-4c350a99928a"
+				}
+			],
+			"timestamp": 0,
+			"synced": true,
+			"remote_id": 695658,
+			"owner": "177461",
+			"sharedWithTeam": false,
+			"subscribed": false,
+			"remoteLink": null,
+			"remoteLinkUpdatedAt": null,
+			"public": false,
+			"createdAt": 1476920942549,
+			"updatedAt": 1479163003540,
+			"write": true,
+			"published": false,
+			"favorite": false,
+			"permissions": {},
+			"syncedPermissions": {},
+			"requests": [
+				{
+					"id": "550a0d0d-229c-54c3-a1a3-c0706daade96",
+					"name": "List users",
+					"description": "",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"method": "GET",
+					"headers": "Content-Type: application/json",
+					"dataMode": "raw",
+					"data": "{\n\t\"firstName\": \"Han\",\n\t\"lastName\": \"Solo\"\n}",
+					"rawModeData": "{\n\t\"firstName\": \"Han\",\n\t\"lastName\": \"Solo\"\n}",
+					"url": "{{website}}/users?fwreinit",
+					"responses": [],
+					"folder": "e816a970-300a-ef83-49c1-4ed9a3d17a7f",
+					"owner": "177461",
+					"preRequestScript": "",
+					"tests": ""
+				},
+				{
+					"id": "578fe209-914e-b758-fbc0-b6dd74aa85aa",
+					"headers": "",
+					"url": "{{website}}/api/v1/artists/16?fwreinit",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "DELETE",
+					"data": [],
+					"dataMode": "params",
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1478014981242,
+					"name": "Delete Single Artist",
+					"description": "",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"responses": []
+				},
+				{
+					"id": "793ebbe6-8148-1b68-d55e-66da399ea120",
+					"headers": "Accept: application/vnd.mywebsite+json; version=1\n",
+					"url": "{{website}}/users/15",
+					"pathVariables": {},
+					"preRequestScript": null,
+					"method": "GET",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"data": null,
+					"dataMode": "params",
+					"name": "Header - v2 of user",
+					"description": "",
+					"descriptionFormat": "html",
+					"time": 1477041803803,
+					"version": 2,
+					"responses": [],
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"folder": "64f62376-ffe0-4c0e-ef33-55be010ae5d4"
+				},
+				{
+					"id": "87847cf6-f667-03e4-8546-329b12390a52",
+					"headers": "Accept: application/vnd.mywebsite+json; version=1\n",
+					"url": "{{website}}/artists/15",
+					"preRequestScript": null,
+					"pathVariables": {},
+					"method": "GET",
+					"data": null,
+					"dataMode": "params",
+					"version": 2,
+					"tests": null,
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1477041884175,
+					"name": "Header - v1 of user",
+					"description": "",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"responses": []
+				},
+				{
+					"id": "8c6bbe0a-d722-0844-25e7-a500fec749cc",
+					"name": "/users/simple",
+					"description": "Simple request routing example",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"method": "GET",
+					"headers": "",
+					"dataMode": "params",
+					"data": [],
+					"rawModeData": "",
+					"url": "{{website}}/users/simple/?fwreinit",
+					"responses": [],
+					"folder": "e816a970-300a-ef83-49c1-4ed9a3d17a7f",
+					"owner": "177461",
+					"preRequestScript": "",
+					"tests": ""
+				},
+				{
+					"id": "9807dddd-44bf-4635-45e3-f5f7ac670ca6",
+					"name": "Get Single Artist",
+					"description": "Simple request routing example",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"method": "GET",
+					"headers": "",
+					"dataMode": "params",
+					"data": [],
+					"rawModeData": "",
+					"url": "{{website}}/api/v1/artists/15",
+					"responses": [],
+					"folder": "1917d3c5-7ecd-4732-a9f6-7c2ff996f164",
+					"owner": "177461",
+					"preRequestScript": "",
+					"tests": ""
+				},
+				{
+					"id": "9950bdbd-4b82-7aa5-dc7d-54fa7bb25fb9",
+					"headers": "",
+					"url": "{{website}}/api/v1/artists?offset=2&limit=3",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "GET",
+					"data": [],
+					"dataMode": "params",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1477060429415,
+					"name": "Get Artists",
+					"description": "",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"responses": []
+				},
+				{
+					"id": "9b70e77d-09c4-464b-4ce1-18108f2533bc",
+					"name": "Echo Index",
+					"description": "",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"method": "GET",
+					"headers": "",
+					"dataMode": "params",
+					"data": [],
+					"rawModeData": "",
+					"url": "{{website}}/api/v2/echo/index",
+					"responses": [],
+					"folder": "5dc8d705-86cb-cd0d-4015-6f07fe110e63",
+					"owner": "177461",
+					"preRequestScript": "",
+					"tests": ""
+				},
+				{
+					"id": "9d580700-480c-1058-5ea3-c0fa5c273e1d",
+					"name": "Create new user",
+					"description": "",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"method": "POST",
+					"headers": "Content-Type: application/json",
+					"dataMode": "raw",
+					"data": "{\n\t\"firstName\": \"Han\",\n\t\"lastName\": \"Solo\"\n}",
+					"rawModeData": "{\n\t\"firstName\": \"Han\",\n\t\"lastName\": \"Solo\"\n}",
+					"url": "{{website}}/users?fwreinit",
+					"responses": [],
+					"folder": "e816a970-300a-ef83-49c1-4ed9a3d17a7f",
+					"owner": "177461",
+					"preRequestScript": "",
+					"tests": ""
+				},
+				{
+					"id": "e2715ba1-7e78-d49f-e409-0e736f684399",
+					"headers": "Content-Type: application/json\n",
+					"url": "{{website}}/api/v1/artists/16?fwreinit",
+					"preRequestScript": "",
+					"pathVariables": {},
+					"method": "PATCH",
+					"data": "{\n\t\"firstName\": \"Evagoras\",\n\t\"lastName\": null,\n\t\"address\": \"Pentelis 33\",\n\t\"city\": \"Nicosia\",\n\t\"state\": \"CA\",\n\t\"postalCode\": \"2013\",\n\t\"email\": \"evagoras@gmail.com\",\n\t\"phone\": \"99544661\",\n\t\"fax\": \"22494910\",\n\t\"active\": false\n}",
+					"dataMode": "raw",
+					"version": 2,
+					"tests": "",
+					"currentHelper": "normal",
+					"helperAttributes": {},
+					"time": 1478039002158,
+					"name": "Update Single Artist",
+					"description": "Simple request routing example",
+					"collectionId": "66a8d68b-509e-b7b9-97ef-4c350a99928a",
+					"responses": []
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "d2b00f27-7093-3893-e6be-92397f8e0e16",
+			"name": "Lucee 5",
+			"values": [
+				{
+					"key": "website",
+					"value": "http://localhost:52520",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"team": null,
+			"timestamp": 1479163283087
+		}
+	],
+	"headerPresets": [
+		{
+			"id": "0c8910ba-0f5f-996c-78a2-4bd1dafea1ff",
+			"name": "Media Type",
+			"headers": [
+				{
+					"key": "Accept",
+					"value": "application/vnd.mywebsite+json; version=1",
+					"type": "text",
+					"name": "Accept",
+					"enabled": true
+				}
+			],
+			"timestamp": 1464304965405
+		}
+	],
+	"globals": []
+}
