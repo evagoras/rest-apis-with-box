@@ -4,14 +4,18 @@ component
 {
 
 
-	property name="ID" jsontype="number";
+	property name="offset" jsonType="number";
+	property name="limit" jsonType="number";
 
 
 	this.constraints = {
-		"ID" = {
+		"offset" = {
 			type = "integer",
-			min = 1,
-			required = true
+			min = 0
+		},
+		"limit" = {
+			type = "integer",
+			min = 0
 		}
 	};
 

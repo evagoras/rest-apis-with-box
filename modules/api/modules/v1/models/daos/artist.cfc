@@ -112,48 +112,48 @@ singleton = true
 	}
 
 
-	public any function getArtists
-	(
-		required numeric offset,
-		required numeric limit
-	)
-	{
-		var qry = queryExecute
-		(
-			'
-				SELECT *, 0 as totalcount
-				FROM artists
-				order by "ARTISTID" DESC
-				LIMIT :limit
-				OFFSET :offset
-			',
-			{
-				offset = {
-					cfsqltype = "cf_sql_integer",
-					value = arguments.offset
-				},
-				limit = {
-					cfsqltype = "cf_sql_integer",
-					value = arguments.limit
-				}
-			},
-			{ datasource = dsn.name }
-		);
-		var qryCount = queryExecute
-		(
-			'
-				SELECT count(*) as totalcount
-				FROM artists
-			',
-			{},
-			{ datasource = dsn.name }
-		);
-		for ( var row=1; row <= qry.recordcount; row++ )
-		{
-			querySetCell( qry, "totalcount", qryCount.totalcount, row );
-		}
-		return qry;
-	}
+	// public any function getArtists
+	// (
+	// 	required numeric offset,
+	// 	required numeric limit
+	// )
+	// {
+	// 	var qry = queryExecute
+	// 	(
+	// 		'
+	// 			SELECT *, 0 as totalcount
+	// 			FROM artists
+	// 			order by "ARTISTID" DESC
+	// 			LIMIT :limit
+	// 			OFFSET :offset
+	// 		',
+	// 		{
+	// 			offset = {
+	// 				cfsqltype = "cf_sql_integer",
+	// 				value = arguments.offset
+	// 			},
+	// 			limit = {
+	// 				cfsqltype = "cf_sql_integer",
+	// 				value = arguments.limit
+	// 			}
+	// 		},
+	// 		{ datasource = dsn.name }
+	// 	);
+	// 	var qryCount = queryExecute
+	// 	(
+	// 		'
+	// 			SELECT count(*) as totalcount
+	// 			FROM artists
+	// 		',
+	// 		{},
+	// 		{ datasource = dsn.name }
+	// 	);
+	// 	for ( var row=1; row <= qry.recordcount; row++ )
+	// 	{
+	// 		querySetCell( qry, "totalcount", qryCount.totalcount, row );
+	// 	}
+	// 	return qry;
+	// }
 
 
 	/**

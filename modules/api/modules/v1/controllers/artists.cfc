@@ -139,57 +139,58 @@ extends = "v1.controllers.baseHandler"
 	}
 
 
-	public any function list
-	( event, rc, prc )
-	{
-		param name="rc.offset" default=0;
-		param name="rc.limit" default=getSetting( "paging" ).maxDefault;
-		// Validate the request
-		var requestArtistBean = wirebox.getInstance( "beans.request.artistList@v1" );
-		requestArtistBean.populate( memento = rc );
-		// No validation errors
-		if ( requestArtistBean.validates() )
-		{
-			// Order list returns a Response Bean
-			var responseBean = artistService.getArtists
-			(
-				offset = rc.offset,
-				limit = rc.limit
-			);
-			if ( responseBean.getTotalCount() == 0 )
-			{
-				responseData = "[]";
-			}
-			else
-			{
-				var responseData = "";
-				var elements = [];
-				for ( var element in responseBean.getData() )
-				{
-					elements.append( element.serializeAs( "json" ) );
-					responseData = "[" & elements.toList( ", " ) & "]";
-				}
-			}
-			prc.response
-				.setStatusCode( responseBean.getStatusCode() )
-				.setStatusText( responseBean.getStatusText() )
-				.setError( responseBean.getError() )
-				.setTotalCount( responseBean.getTotalCount() )
-				.setContentType( responseBean.getContentType() )
-				.setData( responseData )
-			;
-		}
-		// Has validation errors
-		else
-		{
-			prc.response
-				.setError( true )
-				.setStatusCode( 400 )
-				.setStatusText( "Bad Request" )
-				.setData( requestArtistBean.returnErrors() )
-			;
-		}
-	}
+	// public any function list
+	// ( event, rc, prc )
+	// {
+	// 	param name="rc.offset" default=0;
+	// 	param name="rc.limit" default=getSetting( "paging" ).maxDefault;
+	// 	// Validate the request
+	// 	var requestArtistBean = wirebox.getInstance( "beans.request.artistList@v1" );
+	// 	requestArtistBean.populate( memento = rc );
+	// 	// No validation errors
+	// 	if ( requestArtistBean.validates() )
+	// 	{
+	// 		// Order list returns a Response Bean
+	// 		var responseBean = artistService.getArtists
+	// 		(
+	// 			offset = rc.offset,
+	// 			limit = rc.limit
+	// 		);
+	// 		if ( responseBean.getTotalCount() == 0 )
+	// 		{
+	// 			responseData = "[]";
+	// 		}
+	// 		else
+	// 		{
+	// 			var responseData = "";
+	// 			var elements = [];
+	// 			for ( var element in responseBean.getData() )
+	// 			{
+	// 				elements.append( element.serializeAs( "json" ) );
+	// 				responseData = "[" & elements.toList( ", " ) & "]";
+	// 			}
+	// 		}
+	// 		prc.response
+	// 			.setStatusCode( responseBean.getStatusCode() )
+	// 			.setStatusText( responseBean.getStatusText() )
+	// 			.setError( responseBean.getError() )
+	// 			// .setTotalCount( responseBean.getTotalCount() )
+	// 			.setContentType( responseBean.getContentType() )
+	// 			.setData( responseData )
+	// 			// .setFormat( "plain" )
+	// 		;
+	// 	}
+	// 	// Has validation errors
+	// 	else
+	// 	{
+	// 		prc.response
+	// 			.setError( true )
+	// 			.setStatusCode( 400 )
+	// 			.setStatusText( "Bad Request" )
+	// 			.setData( requestArtistBean.returnErrors() )
+	// 		;
+	// 	}
+	// }
 
 
 	/**

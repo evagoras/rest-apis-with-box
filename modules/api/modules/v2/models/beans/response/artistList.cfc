@@ -4,6 +4,7 @@ component
 {
 
 
+	property name="artistID"	jsontype="number";
 	property name="firstName"	jsontype="string";
 	property name="lastName"	jsontype="string";
 	property name="address"		jsontype="string";
@@ -13,6 +14,8 @@ component
 	property name="email"		jsontype="string";
 	property name="phone"		jsontype="string";
 	property name="fax"			jsontype="string";
+	property name="dateCreated"	jsontype="date";
+	property name="active" 		jsontype="boolean";
 
 
 	function init()

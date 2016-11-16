@@ -16,6 +16,9 @@ component
 	 */
 	public any function view
 	( event, rc, prc )
+	// cache=true
+	// cacheTimeout="10"
+	// cacheLastAccessTimeout="5"
 	{
 		var requestViewBean = wirebox.getInstance( "beans.request.artistView@v2" );
 		// populate Bean from the arguments collection
@@ -28,6 +31,7 @@ component
 				prc.response
 					.setStatusCode( 200 )
 					.setStatusText( "OK" )
+					.setContentType( "application/json" )
 					.setData( artistBean.serializeAs( "json" ) )
 				;
 			}
@@ -37,6 +41,7 @@ component
 					.setStatusCode( 404 )
 					.setStatusText( "Not Found" )
 					.setData( "" )
+					.setContentType( "application/json" )
 				;
 			}
 		}
@@ -49,6 +54,59 @@ component
 				.setStatusCode( 400 )
 				.setStatusText( "Bad Request" )
 				.setData( requestViewBean.returnErrors() )
+			;
+		}
+	}
+
+
+	public any function list
+	( event, rc, prc )
+	{
+		param name="rc.offset" default=0;
+		param name="rc.limit" default=getSetting( "paging" ).maxDefault;
+		// Validate the request
+		var requestArtistBean = getInstance( "beans.request.artistList@v2" );
+		requestArtistBean.populate( memento = rc );
+		// No validation errors
+		if ( requestArtistBean.validates() )
+		{
+			// Order list returns a Response Bean
+			var responseBean = artistService.getArtists
+			(
+				offset = rc.offset,
+				limit = rc.limit
+			);
+			if ( responseBean.getTotalCount() == 0 )
+			{
+				responseData = "[]";
+			}
+			else
+			{
+				var responseData = "";
+				var elements = [];
+				for ( var element in responseBean.getData() )
+				{
+					elements.append( element.serializeAs( "json" ) );
+					responseData = "[" & elements.toList( ", " ) & "]";
+				}
+			}
+			prc.response
+				.setStatusCode( responseBean.getStatusCode() )
+				.setStatusText( responseBean.getStatusText() )
+				.setError( responseBean.getError() )
+				.setTotalCount( responseBean.getTotalCount() )
+				.setContentType( responseBean.getContentType() )
+				.setData( responseData )
+			;
+		}
+		// Has validation errors
+		else
+		{
+			prc.response
+				.setError( true )
+				.setStatusCode( 400 )
+				.setStatusText( "Bad Request" )
+				.setData( requestArtistBean.returnErrors() )
 			;
 		}
 	}

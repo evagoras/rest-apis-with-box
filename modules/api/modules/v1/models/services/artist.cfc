@@ -14,53 +14,53 @@ component singleton
 	}
 
 
-	public any function getArtists
-	(
-		required numeric offset,
-		required numeric limit
-	)
-	{
-		var responseBean = wirebox.getInstance( "response@api" );
-		var artistCollection = [];
-		var artists = artistDao.getArtists
-		(
-			offset = arguments.offset,
-			limit = arguments.limit
-		);
-		if ( artists.recordCount == 0 )
-		{
-			responseBean
-				.setFormat( "json" )
-				.setStatusCode( 200 )
-				.setStatusText( "OK" )
-				.setData( [] )
-			;
-		}
-		else
-		{
-			var totalCount = artists.totalCount[ 1 ];
-			for
-			(
-				var row = 1;
-				row <= artists.recordCount;
-				row++
-			)
-			{
-				var order = artists.getRow( row );
-				var artistResponseBean = wirebox.getInstance( "beans.response.artistList@v1" );
-				artistResponseBean.populate( order );
-				artistCollection.append( artistResponseBean );
-			}
-			responseBean
-				.setStatusCode( 200 )
-				.setStatusText( "OK" )
-				.setContentType( "application/json" )
-				.setTotalCount( totalCount )
-				.setData( artistCollection )
-			;
-		}
-		return responseBean;
-	}
+	// public any function getArtists
+	// (
+	// 	required numeric offset,
+	// 	required numeric limit
+	// )
+	// {
+	// 	var responseBean = wirebox.getInstance( "response@api" );
+	// 	var artistCollection = [];
+	// 	var artists = artistDao.getArtists
+	// 	(
+	// 		offset = arguments.offset,
+	// 		limit = arguments.limit
+	// 	);
+	// 	if ( artists.recordCount == 0 )
+	// 	{
+	// 		responseBean
+	// 			.setFormat( "json" )
+	// 			.setStatusCode( 200 )
+	// 			.setStatusText( "OK" )
+	// 			.setData( [] )
+	// 		;
+	// 	}
+	// 	else
+	// 	{
+	// 		var totalCount = artists.totalCount[ 1 ];
+	// 		for
+	// 		(
+	// 			var row = 1;
+	// 			row <= artists.recordCount;
+	// 			row++
+	// 		)
+	// 		{
+	// 			var order = artists.getRow( row );
+	// 			var artistResponseBean = wirebox.getInstance( "beans.response.artistList@v1" );
+	// 			artistResponseBean.populate( order );
+	// 			artistCollection.append( artistResponseBean );
+	// 		}
+	// 		responseBean
+	// 			.setStatusCode( 200 )
+	// 			.setStatusText( "OK" )
+	// 			.setContentType( "application/json" )
+	// 			.setTotalCount( totalCount )
+	// 			.setData( artistCollection )
+	// 		;
+	// 	}
+	// 	return responseBean;
+	// }
 
 
 	/**
