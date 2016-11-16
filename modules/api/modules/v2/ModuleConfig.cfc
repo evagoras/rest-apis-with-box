@@ -47,7 +47,7 @@ component {
 		routes = [
 			// Module Entry Point
 			{ pattern="/", handler="echo",action="index" },
-			{ pattern="/artists/:ID", handler="artists", action={GET="view", PATCH="patch", DELETE="remove", OPTIONS="options"} },
+			{ pattern="/artists/:ID", handler="artists", action={GET="view", OPTIONS="options"} },
 			{ pattern="/artists", handler="artists", action={GET="list", OPTIONS="options"} },
 			// Convention Route
 			{ pattern="/:handler/:action?" }

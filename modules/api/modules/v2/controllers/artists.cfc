@@ -70,40 +70,37 @@ component
 		// No validation errors
 		if ( requestArtistBean.validates() )
 		{
-			// Order list returns a Response Bean
-			var responseBean = artistService.getArtists
+			var results = artistService.getArtists
 			(
 				offset = rc.offset,
 				limit = rc.limit
 			);
-			if ( responseBean.getTotalCount() == 0 )
-			{
-				responseData = "[]";
-			}
-			else
+			prc.response
+				.setStatusCode( 200 )
+				.setStatusText( "OK" )
+				.setTotalCount( results.totalcount )
+				.setContentType( "application/json" )
+			;
+			if ( results.totalcount > 0 )
 			{
 				var responseData = "";
 				var elements = [];
-				for ( var element in responseBean.getData() )
+				for ( var element in results.data )
 				{
 					elements.append( element.serializeAs( "json" ) );
 					responseData = "[" & elements.toList( ", " ) & "]";
 				}
+				prc.response.setData( responseData );
 			}
-			prc.response
-				.setStatusCode( responseBean.getStatusCode() )
-				.setStatusText( responseBean.getStatusText() )
-				.setError( responseBean.getError() )
-				.setTotalCount( responseBean.getTotalCount() )
-				.setContentType( responseBean.getContentType() )
-				.setData( responseData )
-			;
+			else
+			{
+				prc.response.setData( [] );
+			}
 		}
 		// Has validation errors
 		else
 		{
 			prc.response
-				.setError( true )
 				.setStatusCode( 400 )
 				.setStatusText( "Bad Request" )
 				.setData( requestArtistBean.returnErrors() )

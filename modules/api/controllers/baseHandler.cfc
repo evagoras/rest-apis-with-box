@@ -10,6 +10,8 @@
 component extends="coldbox.system.EventHandler"
 {
 
+	property name="utils" inject="utils";
+
 	// OPTIONAL HANDLER PROPERTIES
 	this.prehandler_only 		= "";
 	this.prehandler_except 		= "";
@@ -41,6 +43,15 @@ component extends="coldbox.system.EventHandler"
 			var stime = getTickCount();
 			// prepare our response object
 			prc.response = getModel( "response@api" );
+			// add the request URL back in the response
+			prc.response.setUrl
+			(
+				utils.getRequestUrl
+				(
+					serverCGI = cgi,
+					includeHost = true
+				)
+			);
 			// prepare argument execution
 			var args = { event = arguments.event, rc = arguments.rc, prc = arguments.prc };
 			structAppend( args, arguments.eventArguments );

@@ -40,25 +40,18 @@ component singleton
 		required numeric limit
 	)
 	{
-		var responseBean = wirebox.getInstance( "response@api" );
-		var artistCollection = [];
+		var results = {
+			"data" = [],
+			"totalcount" =	 0
+		};
 		var artists = artistDao.getArtists
 		(
 			offset = arguments.offset,
 			limit = arguments.limit
 		);
-		if ( artists.recordCount == 0 )
+		if ( artists.recordCount > 0 )
 		{
-			responseBean
-				.setFormat( "json" )
-				.setStatusCode( 200 )
-				.setStatusText( "OK" )
-				.setData( [] )
-			;
-		}
-		else
-		{
-			var totalCount = artists.totalCount[ 1 ];
+			results.totalcount = artists.totalCount[ 1 ];
 			for
 			(
 				var row = 1;
@@ -69,17 +62,10 @@ component singleton
 				var order = artists.getRow( row );
 				var artistResponseBean = wirebox.getInstance( "beans.response.artistList@v2" );
 				artistResponseBean.populate( order );
-				artistCollection.append( artistResponseBean );
+				results.data.append( artistResponseBean );
 			}
-			responseBean
-				.setStatusCode( 200 )
-				.setStatusText( "OK" )
-				.setContentType( "application/json" )
-				.setTotalCount( totalCount )
-				.setData( artistCollection )
-			;
 		}
-		return responseBean;
+		return results;
 	}
 
 

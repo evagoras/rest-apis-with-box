@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Building RESTful APIs using Box Products",
-		"_postman_id": "594526ab-3603-a213-2f9e-3c3cf1799c13",
+		"_postman_id": "0afe2510-ddc2-40e1-6fbb-cad0047af2be",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -216,7 +216,7 @@
 				{
 					"name": "Get Artists",
 					"request": {
-						"url": "{{website}}/api/v2/artists?offset=2&limit=3",
+						"url": "{{website}}/api/v2/artists?offset=2&limit=3&fwreinit",
 						"method": "GET",
 						"header": [],
 						"body": {
