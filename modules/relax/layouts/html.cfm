@@ -1,1 +1,0 @@
-<cfoutput>#renderLayout( layout="relax", args={ sidebar=false, header=false, print=true } )#</cfoutput>

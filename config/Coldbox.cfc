@@ -138,15 +138,6 @@
 			}
 		};
 
-		relax = {
-			// The location of the relaxed APIs, defaults to models.resources
-			APILocation = "relax.models.resources",
-			// Default API to load, name of the directory inside of resources
-			defaultAPI = "cfartgallery",
-			// History stack size, the number of history items to track in the RelaxURL
-			maxHistory = 10
-		};
-
 	}
 
 
