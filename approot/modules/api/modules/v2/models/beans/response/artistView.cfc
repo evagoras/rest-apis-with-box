@@ -13,6 +13,8 @@ component
 	property name="email"		jsontype="string";
 	property name="phone"		jsontype="string";
 	property name="fax"			jsontype="string";
+	property name="dateCreated"	jsontype="date";
+	property name="active"		jsontype="boolean";
 
 
 	function init()
