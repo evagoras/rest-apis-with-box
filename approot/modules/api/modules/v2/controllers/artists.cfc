@@ -197,10 +197,10 @@ component
 					.setStatusText( "Not Found" )
 					.setError( true )
 					.setErrorCode( 404 )
-					.addHeader( "X-Resource-Not-Found", true );
+					.addHeader( "X-Resource-Not-Found", true )
 				;
 			}
 		}
-
+	}
 
 }

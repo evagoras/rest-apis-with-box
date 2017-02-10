@@ -19,52 +19,52 @@ singleton = true
 		var startingSQL = "UPDATE artists SET ";
 		var sql = [];
 		var params = {};
-		sql.append( "firstName = :firstName")
+		sql.append( "firstName = :firstName");
 		params[ "firstName" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getFirstName()
 		};
-		sql.append( "lastName = :lastName")
+		sql.append( "lastName = :lastName");
 		params[ "lastName" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getLastName()
 		};
-		sql.append( "address = :address")
+		sql.append( "address = :address");
 		params[ "address" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getAddress()
 		};
-		sql.append( "city = :city")
+		sql.append( "city = :city");
 		params[ "city" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getCity()
 		};
-		sql.append( "state = :state")
+		sql.append( "state = :state");
 		params[ "state" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getstate()
 		};
-		sql.append( "postalCode = :postalCode")
+		sql.append( "postalCode = :postalCode");
 		params[ "postalCode" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getpostalCode()
 		};
-		sql.append( "email = :email")
+		sql.append( "email = :email");
 		params[ "email" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getemail()
 		};
-		sql.append( "phone = :phone")
+		sql.append( "phone = :phone");
 		params[ "phone" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getphone()
 		};
-		sql.append( "fax = :fax")
+		sql.append( "fax = :fax");
 		params[ "fax" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getfax()
 		};
-		sql.append( "active = :active")
+		sql.append( "active = :active");
 		params[ "active" ] = {
 			"cfsqltype" = "cf_sql_varchar",
 			"value" = arguments.bean.getactive()

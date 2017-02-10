@@ -28,7 +28,7 @@ singleton = true
 				case "firstName":
 					if ( propertiesToUpdate.keyExists( property ) )
 					{
-						sql.append( "firstName = :firstName")
+						sql.append( "firstName = :firstName");
 						params[ "firstName" ] = {
 							"cfsqltype" = "cf_sql_varchar",
 							"value" = utils.removeBeginningChar2( propertiesToUpdate[ property ] )
@@ -42,7 +42,7 @@ singleton = true
 				case "lastName":
 					if ( propertiesToUpdate.keyExists( property ) )
 					{
-						sql.append( "lastName = :lastName")
+						sql.append( "lastName = :lastName");
 						params[ "lastName" ] = {
 							"cfsqltype" = "cf_sql_varchar",
 							"value" = utils.removeBeginningChar2( propertiesToUpdate[ property ] )
@@ -54,7 +54,7 @@ singleton = true
 					}
 				break;
 				case "address":
-					sql.append( "address = :address")
+					sql.append( "address = :address");
 					params[ "address" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -69,7 +69,7 @@ singleton = true
 					}
 				break;
 				case "city":
-					sql.append( "city = :city")
+					sql.append( "city = :city");
 					params[ "city" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -84,7 +84,7 @@ singleton = true
 					}
 				break;
 				case "state":
-					sql.append( "state = :state")
+					sql.append( "state = :state");
 					params[ "state" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -99,7 +99,7 @@ singleton = true
 					}
 				break;
 				case "postalCode":
-					sql.append( "postalCode = :postalCode")
+					sql.append( "postalCode = :postalCode");
 					params[ "postalCode" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -114,7 +114,7 @@ singleton = true
 					}
 				break;
 				case "email":
-					sql.append( "email = :email")
+					sql.append( "email = :email");
 					params[ "email" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -129,7 +129,7 @@ singleton = true
 					}
 				break;
 				case "phone":
-					sql.append( "phone = :phone")
+					sql.append( "phone = :phone");
 					params[ "phone" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -144,7 +144,7 @@ singleton = true
 					}
 				break;
 				case "fax":
-					sql.append( "fax = :fax")
+					sql.append( "fax = :fax");
 					params[ "fax" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""
@@ -159,7 +159,7 @@ singleton = true
 					}
 				break;
 				case "active":
-					sql.append( "active = :active")
+					sql.append( "active = :active");
 					params[ "active" ] = {
 						"cfsqltype" = "cf_sql_varchar",
 						"value" = ""

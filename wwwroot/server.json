@@ -1,17 +1,23 @@
 {
+    "name":"rest-apis-with-box",
+    "app":{
+        "libDirs":"../database/drivers",
+        "cfengine":"lucee@5.1"
+    },
     "openBrowser":true,
+    "debug":false,
+    "jvm":{
+        "heapSize":1024,
+        "args":""
+    },
     "web":{
-        "rewrites":{
+        "host":"127.0.0.1",
+        "http":{
+            "port":8085,
             "enable":true
         },
-        "http":{
-            "port":"52520"
+        "rewrites":{
+            "enable":true
         }
-    },
-    "JVM":{
-        "heapSize":"1024"
-    },
-    "app":{
-        "cfengine":"lucee"
     }
 }

@@ -33,10 +33,10 @@ else if ( isDefined( "oException" ) && isObject( oException ) )
 else
 {
 	commonException = {
-		"Detail" = exception.detail,
-		"Message" = exception.message,
-		"Type" = exception.type,
-		"TagContext" = exception.tagContext
+		"Detail" = exception.cause.detail,
+		"Message" = exception.cause.message,
+		"Type" = exception.cause.type,
+		"TagContext" = exception.cause.tagContext
 	};
 }
 // vars needed

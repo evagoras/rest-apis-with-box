@@ -29,7 +29,7 @@ component
 	COLDBOX_APP_KEY 		 = "";
 	// JAVA INTEGRATION: JUST DROP JARS IN THE LIB FOLDER
 	// You can add more paths or change the reload flag as well.
-	this.javaSettings = { loadPaths = [ "lib" ], reloadOnChange = true };
+	this.javaSettings = { loadPaths = [ "../lib" ], reloadOnChange = true };
 
 	this.datasources["cfartgallery"] = {
 		driver: "other",
