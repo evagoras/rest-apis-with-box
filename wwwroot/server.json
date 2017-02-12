@@ -1,7 +1,6 @@
 {
     "name":"rest-apis-with-box",
     "app":{
-        "libDirs":"../database/drivers",
         "cfengine":"lucee@5.1"
     },
     "openBrowser":true,

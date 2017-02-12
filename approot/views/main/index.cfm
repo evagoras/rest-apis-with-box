@@ -1,8 +1,8 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron bt">
 	<div class="container">
-		<h1>ColdFusion API</h1>
-		<p class="lead">A RESTful API running on ColdFusion</p>
+		<h1>cfartgallery API</h1>
+		<p class="lead">A RESTful API</p>
 	</div>
 </div>
 
