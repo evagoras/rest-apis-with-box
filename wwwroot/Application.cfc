@@ -1,10 +1,4 @@
-﻿/**
-********************************************************************************
-Copyright 2005-2007 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
-www.ortussolutions.com
-********************************************************************************
-*/
-component
+﻿component
 {
 
 
@@ -29,8 +23,12 @@ component
 	COLDBOX_APP_KEY 		 = "";
 	// JAVA INTEGRATION: JUST DROP JARS IN THE LIB FOLDER
 	// You can add more paths or change the reload flag as well.
-	this.javaSettings = { loadPaths = [ "../lib" ], reloadOnChange = true };
+	this.javaSettings = { loadPaths = [ "" ], reloadOnChange = true };
 
+	/*
+		Auto-register the database.
+		This works for both Lucee and Adobe.
+	 */
 	this.datasources["cfartgallery"] = {
 		driver: "other",
 		class: 'org.sqlite.JDBC',
@@ -40,7 +38,6 @@ component
 		blob:true, // default: false
 		clob:true // default: false
 	};
-	this.datasource = "cfartgallery";
 
 
 	// application start
