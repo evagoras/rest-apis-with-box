@@ -19,3 +19,9 @@ By default I am using Lucee 5 as the application server. You will need to add th
 1. Mac/*nix - `/Users/{yourusername}/.CommandBox/server/{randomstring}-rest-apis-with-box/lucee-5.1.0.34/WEB-INF/lucee/{randomstring}/lib`.
 2. Windows - TO DO.
 
+## Endpoints
+* /artists
+* /artists/1
+* /api/v1/artists/1
+* /api/v2/artists/1
+* /api/v2/artists
