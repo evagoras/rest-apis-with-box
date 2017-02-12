@@ -12,6 +12,8 @@
 	this.mappings[ "/approot" ] = APPROOT;
 	this.mappings[ "/coldbox" ] = APPROOT & "coldbox";
 	this.mappings[ "/postman" ] = expandPath( "../postman/" );
+	this.mappings[ "/tests" ] = expandPath( "../approot/tests" );
+	this.mappings[ "/testbox" ] = expandPath( "../approot/testbox" );
 
 	// COLDBOX STATIC PROPERTY, DO NOT CHANGE UNLESS THIS IS NOT THE ROOT OF YOUR COLDBOX APP
 	COLDBOX_APP_ROOT_PATH = getDirectoryFromPath( getCurrentTemplatePath() );
