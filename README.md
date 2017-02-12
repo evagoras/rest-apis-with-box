@@ -20,8 +20,8 @@ By default I am using Lucee 5 as the application server. You will need to add th
 2. Windows - TO DO.
 
 ## Endpoints
-* /artists
-* /artists/1
-* /api/v1/artists/1
-* /api/v2/artists/1
-* /api/v2/artists
+* [/artists](http://127.0.0.1:8085/artists)
+* [/artists/1](http://127.0.0.1:8085/artists/1)
+* [/api/v1/artists/1](http://127.0.0.1:8085/api/v1/artists/1)
+* [/api/v2/artists/1](http://127.0.0.1:8085/api/v2/artists/1)
+* [/api/v2/artists](http://127.0.0.1:8085/api/v2/artists)
