@@ -1,8 +1,9 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron bt">
+<div class="jumbotron">
 	<div class="container">
-		<h1>cfartgallery API</h1>
-		<p class="lead">A RESTful API</p>
+		<h1>ColdBox REST API</h1>
+		<p class="lead">This is a template of how to use ColdBox to create a RESTful API around the cfartgallery database.</p>
+		<p>Project page at <a href="https://github.com/evagoras/rest-apis-with-box">https://github.com/evagoras/rest-apis-with-box</a></p>
 	</div>
 </div>
 
@@ -20,7 +21,7 @@
 
 				<div class="col-xs-12 col-lg-6">
 					<div class="jumbotron" style="padding: 1rem">
-						<h2>API Environment</h2>
+						<h2>Environment</h2>
 						<h3>
 							<cfoutput>
 							<cfloop list="development,production" index="listItem">
@@ -32,7 +33,7 @@
 						</h3>
 						<br>
 						<h3>
-							<span class="label label-warning"><cfoutput>#prc.hostaddress#</cfoutput></span>
+							<span class="label label-warning">IP: <cfoutput>#prc.hostaddress#</cfoutput></span>
 						</h3>
 					</div>
 				</div>
@@ -76,13 +77,14 @@
 				<div class="row">
 
 					<div class="col-xs-12 col-lg-6">
-						<h2>Documentation</h2>
-						<p>
-							<a href="https://github.com/ColdBox/coldbox-relax">Relax</a> is a tool used for documenting APIs.
-							It automagically describes, models, documents, tests and monitors RESTful services
-							on multiple environments.
-						</p>
-						<p><a class="btn btn-secondary" href="/relax" role="button">View Docs &raquo;</a></p>
+						<h2>Endpoints</h2>
+						<ul>
+							<li><a href="/artists/1">/artists/1</a></li>
+							<li><a href="/artists">/artists</a></li>
+							<li><a href="/api/v1/artists/1">/api/v1/artists/1</a></li>
+							<li><a href="/api/v2/artists/1">/api/v2/artists/1</a></li>
+							<li><a href="/api/v2/artists">/api/v2/artists</a></li>
+						</ul>
 					</div>
 
 					<div class="col-xs-12 col-lg-6">
