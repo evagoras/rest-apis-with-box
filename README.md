@@ -15,7 +15,7 @@ A Bootstrap page should appear running at [127.0.0.1:8085](http://127.0.0.1:8085
 <img src="https://github.com/evagoras/rest-apis-with-box/blob/master/homepage.png" alt="Hoepage" width="500">
 
 ### Step 2. Database
-The project uses the `cfartgallery` database as its data store, running in an sqlite db file. Since the sqlite drivers do not come standard in Adobe or Lucee, you will need to add the driver to get things working.
+The project uses the `cfartgallery` database as its data store, running in an sqlite db file found at `/database/cfartgallery.db`. Since the sqlite drivers do not come standard in Adobe or Lucee, you will need to add the driver to get things working.
 
 Add the file `/database/sqlite-jdbc--3.14.2.1.jar` to these folders depending on whether you are using a Mac/*nix or Windows system:
 
