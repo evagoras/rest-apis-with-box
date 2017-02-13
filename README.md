@@ -28,7 +28,7 @@ After you add the `jar` file, you will need to restart your server for it to tak
 CommandBox:wwwroot> server restart
 ```
 
- As long as you don't delete the server instance from your `/.CommandBox` system folder, you should only have to do this once.
+ As long as you don't delete the server instance from your `/.CommandBox` system folder, you should only have to do this step once.
 
 ## Endpoints
 * [/artists](http://127.0.0.1:8085/artists)
