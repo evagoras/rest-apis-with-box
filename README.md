@@ -2,7 +2,7 @@
 This is a showcase of how to create a REST API using ColdBox. It contains many concepts, such as versioning through modules, request validation using the `cbValidation` module, custom and safe serialization using a Base Bean, use of the `cbBaseHandler` module and the Response Bean Class, and separation of layers to Controllers, Services and DAOs.
 
 ## Installation
-You will need to run the project using CommandBox. Download the project locally on your computer. Then start up CommandBox and navigate to the `wwwroot` folder of the project and run `start`:
+You will need to run the project using CommandBox. Download the project locally on your computer. Then start up CommandBox, navigate to the project main folder and run these commands:
 
 ```
 CommandBox:rest-apis-with-box> cd wwwroot
