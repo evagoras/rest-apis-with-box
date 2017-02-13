@@ -9,7 +9,9 @@ CommandBox:rest-apis-with-box> cd wwwroot
 CommandBox:wwwroot> start
 ```
 
-A Bootstrap page should appear running at [127.0.0.1:8085](http://127.0.0.1:8085).
+A Bootstrap page should appear running at [127.0.0.1:8085](http://127.0.0.1:8085):
+![Homepage](https://github.com/evagoras/rest-apis-with-box/homepage.jpg "Homepage")
+
 
 ## Database
 The project uses the `cfartgallery` database as its data store, running in an sqlite db file. Since the sqlite drivers do not come standard in Adobe or Lucee, you will need to add the driver to get things working.
