@@ -195,14 +195,17 @@ component singleton
 	public any function removeChar2
 	( required any value )
 	{
+		var returnValue = arguments.value;
 		if ( isNull( arguments.value ) )
 		{
 			return arguments.value;
 		}
 		else
 		{
-			return replaceNoCase( arguments.value, chr( 2 ), "", "all" );
+			returnValue = replaceNoCase( arguments.value, chr( 2 ), "", "all" );
+			returnValue = replace( returnValue, "\u0002", "", "all" );
 		}
+		return returnValue;
 	}
 
 
