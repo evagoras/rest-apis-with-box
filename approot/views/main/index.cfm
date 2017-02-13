@@ -76,7 +76,7 @@
 
 				<div class="row">
 
-					<div class="col-xs-12 col-lg-6">
+					<div class="col-xs-12 col-lg-4">
 						<h2>Endpoints</h2>
 						<ul>
 							<li><a href="/artists/1">/artists/1</a></li>
@@ -87,7 +87,7 @@
 						</ul>
 					</div>
 
-					<div class="col-xs-12 col-lg-6">
+					<div class="col-xs-12 col-lg-4">
 						<h2>Postman</h2>
 						<p>
 							The shared Collection below can be imported, and safely overwritten, in Postman.
@@ -111,15 +111,7 @@
 						</cfoutput>
 					</div>
 
-				</div>
-
-				<div class="row">
-					<p>&nbsp;</p>
-				</div>
-
-				<div class="row">
-
-					<div class="col-xs-12 col-lg-6">
+					<div class="col-xs-12 col-lg-4">
 						<h2>Tests</h2>
 						<p>
 							<a href="https://www.gitbook.com/book/ortus/testbox-documentation/details">TestBox</a>
@@ -128,10 +120,6 @@
 							for mocking and stubbing.
 						</p>
 						<p><a class="btn btn-secondary" href="/tests/index.cfm" role="button">Run Tests &raquo;</a></p>
-					</div>
-
-					<div class="col-xs-12 col-lg-6">
-
 					</div>
 
 				</div>
@@ -149,7 +137,7 @@
 	<hr>
 
 	<footer>
-		<p>&copy; Evagoras Charalambous <cfoutput>#year( now() )#</cfoutput></p>
+		<p>&copy; <a href="http://www.evagoras.com">Evagoras Charalambous</a> <cfoutput>#year( now() )#</cfoutput></p>
 	</footer>
 
 </div><!--/.container-->
