@@ -1,4 +1,4 @@
-# A ColdBox RESTful API
+# A ColdBox RESTful API of cfartgallery
 This is a showcase of how to create a REST API using ColdBox. It contains many concepts, such as versioning through modules, request validation using the `cbValidation` module, custom and safe serialization using a Base Bean, use of the `cbBaseHandler` module and the Response Bean Class, and separation of layers to Controllers, Services and DAOs.
 
 ## Installation
