@@ -442,14 +442,16 @@
 	( required query memento )
 	{
 		var data = {};
+		var queryColumns = "";
 		// get array of query columns in the proper case as defined in the SELECT query
 		if ( getCFEngine() == "adobe" )
 		{
-			var queryColumns = arguments.memento.getMetaData().getColumnLabels();
+			queryColumns = arguments.memento.getMetaData().getColumnLabels();
 		}
 		else
 		{
-			var queryColumns = arguments.memento.getColumnList( false );
+			queryColumns = queryColumnArray( arguments.memento ).toList();
+			// var queryColumns = arguments.memento.getColumnList( false );
 		}
 		// loop through the query and construct valid data and nulls
 		for ( var column in queryColumns )
