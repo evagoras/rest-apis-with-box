@@ -1,7 +1,8 @@
 {
     "name":"rest-apis-with-box",
     "app":{
-        "cfengine":"lucee@5.1"
+        "cfengine":"lucee@5.1",
+        "libDirs":"../approot/lib"
     },
     "openBrowser":true,
     "debug":false,
